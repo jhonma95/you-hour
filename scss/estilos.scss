@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+// creacion de variables
+
+$color-back-main: #F0F1F3;
+$image-small: 300px;
+$color-back-cabecera: black;
+
+
 /*Index*/
 
 .header {
@@ -10,7 +18,7 @@
     flex-direction: column;
 
         &__cabecera{
-            background-color: black;
+            background-color: $color-back-cabecera;
             text-align: center;
         
         }
@@ -19,7 +27,7 @@
         }
         
         &__titulo {
-            FONT-FAMILY: math;
+            font-family: math;
             text-align: center;
             font-size: 1rem;
             margin: 20px;
@@ -27,7 +35,7 @@
 
         &__titulo-1{
             text-decoration: none;
-            color: black;
+            color: $color-back-cabecera;
         }
 
         &__logo{
@@ -89,20 +97,20 @@
 
 /*MAIN */
 
+
+// USO DE VARIABLE EN MAIN
 .main {
-    background-color: #F0F1F3;
+    background-color: $color-back-main;
     
     &__prueba-1{
         background: #c764b2;
 }
     &__prueba-2 {
         width: 100%;
-        /* transform: translate(145px, 0px); */
         cursor: pointer;
     }
 
     &_background-3 {
-        /* border-block-end: 2rem; */
         background: bisque;
         height: 570px;
     }
@@ -110,7 +118,7 @@
     &__subtitulo {
         padding: 20px;
         margin-left: 20px;
-        FONT-FAMILY: math;
+        font-family: math;
         font-size: 1rem;
     }
 
@@ -120,8 +128,10 @@
         margin-block-end: 3rem;
     }
 
+    // uso de variables
+
     &__img-intelige {
-        width: 300px;
+        width: $image-small;
         height: 400px;
         border-radius: 30px;
         box-shadow: 0px 15px 115px;
@@ -148,21 +158,27 @@
         transition: height 0.5s;
         transition: width 0.5s;
     }
+        // uso de variables
+
         &__producto-hombre:hover{
-        height: 300px;
+        height: $image-small;
         width: 280px;
         transition: height 0.5s;
         transition: width 0.5s;
 }
+    // uso de variables
+
     &__producto-hombre-1:hover{
-        height: 300px;
+        height: $image-small;
         width: 280px;
         transition: height 0.5s;
         transition: width 0.5s;
 }
+    // uso de variables
+
     &__img-casual {
         height: 440px;
-        width: 300px;
+        width: $image-small;
         border-radius: 40px;
         box-shadow: 0px 15px 115px;
         cursor: pointer;
@@ -177,7 +193,6 @@
         gap: 30px;
 }
 
-    
     &__precios {
         text-align: center;
         font-family: 'Cinzel', serif;
@@ -257,7 +272,7 @@
     &__subtitulo-promo {
         padding: 20px;
         margin-left: 20px;
-        FONT-FAMILY: math;
+        font-family: math;
         font-size: 25px;
 }
 
@@ -521,11 +536,21 @@
     }
 
     .header__titulo {
-        FONT-FAMILY: math;
+        font-family: mat;
         text-align: center;
         font-size: 25px;
         margin: 20px;
     }
+
+
+
+    .header div nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+    }
+
+    
 
     .header__menu li {
         /* padding-left: 30px; */
@@ -549,23 +574,30 @@
     .main__subtitulo {
         padding: 20px;
         margin-left: 20px;
-        FONT-FAMILY: math;
+        font-family: math;
         font-size: 35px;
         text-align: center;
     }
 
     .main__img-intelige {
-        width: 450px;
-        height: 450px;
+        width: 350px;
+        height: 360px;
         border-color: #B2B4B8;
     }
 
     .main__img-casual {
-        width: 450px;
-        height: 550px;
-        padding-block-end: 3rem;
+        width: 350px;
+        height: 360px;
+        padding-block-end: 0;
         border-color: #B2B4B8;
     }
+
+    .main_background-3 {
+        background: bisque;
+        height: 930px;
+        margin-block-end: 3rem;
+    }
+    
 
     /*PROMOCIONES 1024*/
 
@@ -577,8 +609,8 @@
     }
 
     .main__promo-principal {
-        width: 450px;
-        height: 450PX;
+        width: 350px;
+        height: 390PX;
         margin-block-end: 4rem;
     }
 
@@ -591,20 +623,26 @@
     }
 
     .main__producto-hombre {
-        width: 450px;
-        height: 450px;
+        width: 300px;
+        height: 320px;
         margin-block-end: 1rem;
     }
 
+    .main__producto-hombre:hover{
+        width: 350px;
+        height: 360px;
+    }
+
     /*footer 1024px*/
-    .subtitulo__footer {
+    .footer__subtitulo {
         color: white;
         font-family: none;
         font-size: 1.5rem;
         padding: 20px;
         text-align: center;
-        font-size: 45px;
+        font-size: 37px;
     }
+
     .footer__2 {
         display: flex;
         padding: 20px;
@@ -613,6 +651,14 @@
         flex-direction: column;
         text-align: center;
         font-size: 40px;
+    }
+
+    .footer__2 li a {
+        text-decoration: none;
+        list-style: none;
+        color: white;
+        scroll-padding-top: 10px;
+        font-size: 30px;
     }
 
     .footer__parrafo {
@@ -638,6 +684,12 @@
         padding: 10px;
     }
 
+    .header div nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+    }
+
     .main__contenedor-img {
         display: flex;
         flex-wrap: wrap;
@@ -645,9 +697,26 @@
         gap: 30px;
     }
 
-    
+    .main__img-intelige {
+        width: 290px;
+        height: 300px;
+        border-color: #B2B4B8;
+    }
 
-    .subtitulo__footer {
+    .main__img-casual {
+        width: 290px;
+        height: 300px;
+        padding-block-end: 0;
+        border-color: #B2B4B8;
+    }
+
+    .main_background-3 {
+        background: bisque;
+        height: 870px;
+        margin-block-end: 3rem;
+    }
+
+    .footer__subtitulo {
         color: white;
         font-family: none;
         font-size: 1.5rem;
@@ -772,7 +841,7 @@
     }
 
     .header__titulo {
-        FONT-FAMILY: math;
+        font-family: math;
         text-align: center;
         font-size: 20PX;
         margin: 20px;
@@ -795,24 +864,43 @@
     .main__subtitulo {
         padding: 20px;
         margin-left: 20px;
-        FONT-FAMILY: math;
+        font-family: math;
         font-size: 20px;
         text-align: center;
     }
 
     .main__img-intelige {
-        width: 300px;
-        height: 300px;
+        width: 160px;
+        height: 180px;
         border-color: #B2B4B8;
     }
 
+    .main__img-intelige:hover{
+        width: 240px;
+        height: 260px;
+
+    }
+
     .main__img-casual {
-        width: 300px;
-        height: 350px;
-        padding-block-end: 3rem;
+        width: 160px;
+        height: 180px;
+        padding-block-end:0;
         border-color: #B2B4B8;
     }
+
+    .main__img-casual:hover{
+        width: 240px;
+        height: 260px;
+
+    }
     
+    .main_background-3 {
+        background: bisque;
+        height: 770px;
+        margin-block-end: 3rem;
+    }
+
+
     .header__menu {
         display: flex;
         list-style: none;
@@ -829,7 +917,7 @@
         align-items: center;
     }
 
-    .subtitulo__footer {
+    .footer__subtitulo {
         color: white;
         font-family: none;
         font-size: 1.5rem;
@@ -860,12 +948,29 @@
         align-items: center;
     }
 
+    .main__producto-hombre {
+        width: 180px;
+        height: 170px;
+        margin-block-end: 1rem;
+    }
+
+    .main__producto-hombre:hover {
+        width: 260px;
+        height: 270px;
+        margin-block-end: 1rem;
+    }
+
     .main__promo-principal {
-        width: 300px;
-        height: 350px;
+        width: 160px;
+        height: 180px;
         margin-block-end: 4rem;
     }
 
+    .main__promo-principal:hover {
+        width: 210px;
+        height: 280px;
+        margin-block-end: 0;
+    }
 
     .main__contenedor-promo {
         display: flex;
